@@ -1,0 +1,1921 @@
+
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="1zXJXmjSOLOLMZjqNWuMIHvVHwvmIXyGBrAooWNv3Yo">
+  <meta name="description" content="Darius Chiosa Chiosa — Tech & Business portfolio. Market Research, Data Analysis, Python, AI, Business Intelligence, Excel & Financial Modelling.">
+  <meta property="og:title" content="Darius Chiosa Chiosa — Tech & Business">
+  <meta property="og:description" content="Portfolio of Darius Chiosa Chiosa: Market Research, Data Analysis, Python, AI, BI & Financial Modelling.">
+  <meta property="og:type" content="website">
+  <title>Darius Chiosa Chiosa — Tech & Business</title>
+  
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&f[]=boska@400,500,700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Art direction: Romanian raised in Spain, 22yo — Tech & Business analytical profile
+       Palette: Dark charcoal with electric teal accent — precise, ambitious, modern
+       Typography: Boska display + Satoshi body — editorial meets clean Swiss
+       Density: Spacious hero → dense portfolio grid */
+
+    /* ============ TOKENS ============ */
+    :root, 
+    [data-theme="light"] {
+      --color-bg: #f7f6f2;
+      --color-surface: #f2f1ec;
+      --color-surface-2: #eceae4;
+      --color-surface-offset: #e5e3dc;
+      --color-divider: #d4d1ca;
+      --color-border: #cac7bf;
+      --color-text: #1a1916;
+      --color-text-muted: #6b6a65;
+      --color-text-faint: #aaa99f;
+      --color-text-inverse: #f7f6f2;
+      --color-primary: #017a82;
+      --color-primary-hover: #015c63;
+      --color-primary-active: #013d42;
+      --color-primary-highlight: #c5d9d8;
+      
+      --shadow-sm: 0 1px 3px oklch(0.2 0.01 80 / 0.07);
+      --shadow-md: 0 4px 16px oklch(0.2 0.01 80 / 0.10);
+      --shadow-lg: 0 16px 48px oklch(0.2 0.01 80 / 0.14);
+
+      --text-xs:   clamp(0.75rem,  0.7rem  + 0.25vw, 0.875rem);
+      --text-sm:   clamp(0.875rem, 0.8rem  + 0.35vw, 1rem);
+      --text-base: clamp(1rem,     0.95rem + 0.25vw, 1.125rem);
+      --text-lg:   clamp(1.125rem, 1rem    + 0.75vw, 1.5rem);
+      --text-xl:   clamp(1.5rem,   1.2rem  + 1.25vw, 2.25rem);
+      --text-2xl:  clamp(2rem,     1.2rem  + 2.5vw,  3.5rem);
+      --text-hero: clamp(3rem,     0.5rem  + 7vw,    8rem);
+
+      --space-1: 0.25rem; 
+      --space-2: 0.5rem; 
+      --space-3: 0.75rem; 
+      --space-4: 1rem;
+      --space-5: 1.25rem; 
+      --space-6: 1.5rem; 
+      --space-8: 2rem; 
+      --space-10: 2.5rem;
+      --space-12: 3rem; 
+      --space-16: 4rem; 
+      --space-20: 5rem; 
+      --space-24: 6rem;
+
+      --radius-sm: 0.375rem; 
+      --radius-md: 0.5rem; 
+      --radius-lg: 0.75rem;
+      --radius-xl: 1rem; 
+      --radius-2xl: 1.5rem; 
+      --radius-full: 9999px;
+      
+      --transition-interactive: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+
+      --content-narrow: 640px;
+      --content-default: 960px;
+      --content-wide: 1200px;
+
+      --font-display: 'Boska', 'Georgia', serif;
+      --font-body: 'Satoshi', 'Helvetica Neue', sans-serif;
+    }
+
+    [data-theme="dark"] {
+      --color-bg: #111110;
+      --color-surface: #171614;
+      --color-surface-2: #1d1c1a;
+      --color-surface-offset: #222120;
+      --color-divider: #2c2b29;
+      --color-border: #363532;
+      --color-text: #d8d7d4;
+      --color-text-muted: #7a7977;
+      --color-text-faint: #555451;
+      --color-text-inverse: #111110;
+      --color-primary: #3da8b0;
+      --color-primary-hover: #1a8d96;
+      --color-primary-active: #0e6e76;
+      --color-primary-highlight: #1e3538;
+      
+      --shadow-sm: 0 1px 3px oklch(0 0 0 / 0.25);
+      --shadow-md: 0 4px 16px oklch(0 0 0 / 0.35);
+      --shadow-lg: 0 16px 48px oklch(0 0 0 / 0.50);
+    }
+
+    /* ============ BASE ============ */
+    *, 
+    *::before, 
+    *::after { 
+      box-sizing: border-box; 
+      margin: 0; 
+      padding: 0; 
+    }
+    
+    html, 
+    body {
+      overflow-x: hidden;
+      width: 100%;
+    }
+    
+    html {
+      -webkit-font-smoothing: antialiased;
+      scroll-behavior: smooth;
+      scroll-padding-top: 5rem;
+    }
+    
+    body {
+      min-height: 100dvh;
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      color: var(--color-text);
+      background: var(--color-bg);
+      line-height: 1.65;
+      transition: background var(--transition-interactive), color var(--transition-interactive);
+    }
+    
+    img, 
+    picture, 
+    video, 
+    canvas, 
+    svg { 
+      display: block; 
+      max-width: 100%; 
+      height: auto; 
+    }
+    
+    ul[role="list"], 
+    ol[role="list"] { 
+      list-style: none; 
+    }
+    
+    input, 
+    button, 
+    textarea, 
+    select { 
+      font: inherit; 
+      color: inherit; 
+    }
+    
+    h1, h2, h3, h4, h5, h6 { 
+      text-wrap: balance; 
+      line-height: 1.15; 
+      font-family: var(--font-display); 
+    }
+    
+    p, 
+    li { 
+      text-wrap: pretty; 
+    }
+    
+    button { 
+      cursor: pointer; 
+      background: none; 
+      border: none; 
+    }
+    
+    a { 
+      color: inherit; 
+      text-decoration: none; 
+    }
+    
+    ::selection { 
+      background: oklch(from var(--color-primary) l c h / 0.22); 
+      color: var(--color-text); 
+    }
+    
+    :focus-visible { 
+      outline: 2px solid var(--color-primary); 
+      outline-offset: 3px; 
+      border-radius: var(--radius-sm); 
+    }
+
+    a, 
+    button, 
+    [role="button"] {
+      transition: color var(--transition-interactive), 
+                  background var(--transition-interactive),
+                  border-color var(--transition-interactive), 
+                  box-shadow var(--transition-interactive),
+                  opacity var(--transition-interactive);
+    }
+
+    /* ============ NAV ============ */
+    .nav {
+      position: fixed; 
+      top: 0; 
+      left: 0; 
+      right: 0; 
+      z-index: 100;
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between;
+      padding: var(--space-4) clamp(var(--space-6), 5vw, var(--space-12));
+      background: oklch(from var(--color-bg) l c h / 0.88);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--color-divider);
+    }
+    
+    .nav-logo {
+      display: flex; 
+      align-items: center; 
+      gap: var(--space-3);
+      font-family: var(--font-display);
+      font-size: var(--text-base);
+      font-weight: 700;
+      color: var(--color-text);
+    }
+    
+    .nav-logo svg { 
+      flex-shrink: 0; 
+    }
+    
+    .nav-links {
+      display: flex; 
+      align-items: center; 
+      gap: var(--space-6);
+      list-style: none;
+    }
+    
+    .nav-links a {
+      font-size: var(--text-sm);
+      font-weight: 500;
+      color: var(--color-text-muted);
+      letter-spacing: 0.01em;
+    }
+    
+    .nav-links a:hover { 
+      color: var(--color-text); 
+    }
+    
+    .nav-right { 
+      display: flex; 
+      align-items: center; 
+      gap: var(--space-4); 
+    }
+    
+    .theme-toggle {
+      width: 36px; 
+      height: 36px;
+      display: flex; 
+      align-items: center; 
+      justify-content: center;
+      border-radius: var(--radius-md);
+      color: var(--color-text-muted);
+      background: transparent;
+    }
+    
+    .theme-toggle:hover { 
+      background: var(--color-surface-2); 
+      color: var(--color-text); 
+    }
+    
+    .nav-cta {
+      padding: var(--space-2) var(--space-4);
+      background: var(--color-primary);
+      color: var(--color-text-inverse);
+      border-radius: var(--radius-full);
+      font-size: var(--text-sm);
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+    
+    .nav-cta:hover { 
+      background: var(--color-primary-hover); 
+    }
+    
+    .hamburger { 
+      display: none; 
+      flex-direction: column; 
+      gap: 5px; 
+      padding: var(--space-2); 
+      border-radius: var(--radius-md); 
+    }
+    
+    .hamburger span { 
+      width: 22px; 
+      height: 2px; 
+      background: var(--color-text); 
+      border-radius: 2px; 
+      transition: all var(--transition-interactive); 
+    }
+
+    /* ============ HERO ============ */
+    .hero {
+      min-height: 100dvh;
+      display: flex; 
+      flex-direction: column; 
+      justify-content: flex-end;
+      padding: clamp(var(--space-16), 8vw, var(--space-24)) clamp(var(--space-6), 5vw, var(--space-12));
+      padding-top: calc(clamp(var(--space-16), 8vw, var(--space-24)) + 5rem);
+      position: relative; 
+      overflow: hidden;
+    }
+    
+    .hero-bg {
+      position: absolute; 
+      inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 70% 30%, oklch(from var(--color-primary) l c h / 0.08) 0%, transparent 65%),
+                  radial-gradient(ellipse 50% 40% at 10% 80%, oklch(0.5 0.03 210 / 0.06) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    
+    .hero-eyebrow {
+      font-family: var(--font-body);
+      font-size: var(--text-xs);
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-primary);
+      margin-bottom: var(--space-4);
+    }
+    
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: var(--text-hero);
+      font-weight: 700;
+      line-height: 0.95;
+      color: var(--color-text);
+      max-width: 14ch;
+      margin-bottom: var(--space-6);
+    }
+    
+    .hero-title em {
+      font-style: italic;
+      color: var(--color-primary);
+    }
+    
+    .hero-subtitle {
+      font-size: var(--text-lg);
+      color: var(--color-text-muted);
+      max-width: 50ch;
+      margin-bottom: var(--space-8);
+      font-family: var(--font-body);
+      font-weight: 400;
+    }
+    
+    .hero-actions { 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: var(--space-4); 
+      align-items: center; 
+    }
+    
+    .btn-primary {
+      display: inline-flex; 
+      align-items: center; 
+      gap: var(--space-2);
+      padding: var(--space-3) var(--space-6);
+      background: var(--color-primary);
+      color: var(--color-text-inverse);
+      border-radius: var(--radius-full);
+      font-size: var(--text-sm); 
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+    
+    .btn-primary:hover { 
+      background: var(--color-primary-hover); 
+    }
+    
+    .btn-ghost {
+      display: inline-flex; 
+      align-items: center; 
+      gap: var(--space-2);
+      padding: var(--space-3) var(--space-6);
+      border: 1px solid var(--color-border);
+      color: var(--color-text);
+      border-radius: var(--radius-full);
+      font-size: var(--text-sm); 
+      font-weight: 500;
+    }
+    
+    .btn-ghost:hover { 
+      background: var(--color-surface-2); 
+      border-color: var(--color-text-muted); 
+    }
+    
+    .hero-scroll {
+      position: absolute; 
+      bottom: var(--space-8); 
+      left: 50%; 
+      transform: translateX(-50%);
+      font-size: var(--text-xs); 
+      color: var(--color-text-faint); 
+      letter-spacing: 0.1em;
+      display: flex; 
+      flex-direction: column; 
+      align-items: center; 
+      gap: var(--space-2);
+    }
+    
+    .hero-scroll-line {
+      width: 1px; 
+      height: 40px;
+      background: linear-gradient(to bottom, var(--color-primary), transparent);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+    
+    @keyframes scrollPulse { 
+      0%, 100% { opacity: 0.4; } 
+      50% { opacity: 1; } 
+    }
+
+    /* ============ SECTIONS ============ */
+    .section { 
+      padding: clamp(var(--space-12), 8vw, var(--space-24)) clamp(var(--space-6), 5vw, var(--space-12)); 
+    }
+    
+    .section-inner { 
+      max-width: var(--content-wide); 
+      margin-inline: auto; 
+    }
+    
+    .section-narrow { 
+      max-width: var(--content-default); 
+      margin-inline: auto; 
+    }
+    
+    .section-label {
+      font-size: var(--text-xs); 
+      font-weight: 600;
+      letter-spacing: 0.14em; 
+      text-transform: uppercase;
+      color: var(--color-primary); 
+      margin-bottom: var(--space-3);
+      font-family: var(--font-body);
+    }
+    
+    .section-title {
+      font-size: var(--text-2xl);
+      font-weight: 700; 
+      line-height: 1.1;
+      margin-bottom: var(--space-4);
+    }
+    
+    .section-description {
+      font-size: var(--text-base);
+      color: var(--color-text-muted);
+      max-width: 60ch;
+      margin-bottom: var(--space-10);
+    }
+    
+    .divider { 
+      height: 1px; 
+      background: var(--color-divider); 
+    }
+
+    /* ============ ABOUT & EXPERIENCE ============ */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(var(--space-8), 5vw, var(--space-16));
+      align-items: center;
+    }
+    
+    .about-text p {
+      font-size: var(--text-base);
+      color: var(--color-text-muted);
+      line-height: 1.75;
+      margin-bottom: var(--space-4);
+      max-width: 55ch;
+    }
+    
+    .about-text p:last-of-type { 
+      margin-bottom: var(--space-6); 
+    }
+    
+    .about-visual {
+      position: relative;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-2xl);
+      overflow: hidden;
+      aspect-ratio: 4/5;
+      display: flex; 
+      align-items: center; 
+      justify-content: center;
+    }
+    
+    .about-visual-inner {
+      padding: var(--space-8);
+      text-align: center;
+    }
+    
+    .about-avatar {
+      width: 100px; 
+      height: 100px; 
+      border-radius: var(--radius-full);
+      background: var(--color-primary-highlight);
+      display: flex; 
+      align-items: center; 
+      justify-content: center;
+      margin: 0 auto var(--space-6);
+      font-size: 2.5rem;
+    }
+    
+    .about-stats {
+      display: grid; 
+      grid-template-columns: 1fr 1fr; 
+      gap: var(--space-4); 
+      margin-top: var(--space-6);
+    }
+    
+    .stat-card:nth-child(5):last-child {
+      grid-column: span 2;
+    }
+    
+    .stat-card {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-divider);
+      border-radius: var(--radius-lg);
+      padding: var(--space-4);
+      text-align: center;
+    }
+    
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: var(--text-xl); 
+      font-weight: 700;
+      color: var(--color-primary); 
+      line-height: 1;
+    }
+    
+    .stat-label { 
+      font-size: var(--text-xs); 
+      color: var(--color-text-muted); 
+      margin-top: var(--space-1); 
+    }
+
+    /* Timeline & Experience Grid */
+    .experience-section-title {
+      font-family: var(--font-body);
+      font-size: var(--text-sm); 
+      font-weight: 700;
+      letter-spacing: 0.1em; 
+      text-transform: uppercase;
+      color: var(--color-text);
+      margin-bottom: var(--space-4);
+      margin-top: var(--space-12);
+      padding-bottom: var(--space-2);
+      border-bottom: 1px solid var(--color-divider);
+    }
+    
+    .experience-list {
+      display: flex; 
+      flex-direction: column; 
+      gap: var(--space-8);
+      margin-top: var(--space-6);
+    }
+    
+    .exp-item {
+      display: grid; 
+      grid-template-columns: 1fr; 
+      gap: var(--space-2);
+    }
+    
+    .exp-date {
+      font-size: var(--text-xs); 
+      color: var(--color-primary);
+      font-weight: 600; 
+      letter-spacing: 0.05em; 
+      text-transform: uppercase;
+    }
+    
+    .exp-role {
+      font-size: var(--text-lg); 
+      font-weight: 700; 
+      color: var(--color-text);
+      font-family: var(--font-display); 
+      line-height: 1.2; 
+      margin-bottom: 4px;
+    }
+    
+    .exp-company { 
+      font-weight: 500; 
+      color: var(--color-text-muted); 
+      font-size: var(--text-base); 
+    }
+    
+    .exp-desc { 
+      font-size: var(--text-sm); 
+      color: var(--color-text-muted); 
+      margin-top: var(--space-2); 
+      max-width: 65ch; 
+      line-height: 1.6; 
+    }
+    
+    @media (min-width: 768px) {
+      .exp-item { 
+        grid-template-columns: 180px 1fr; 
+        gap: var(--space-6); 
+      }
+      .exp-date { 
+        text-align: right; 
+        padding-top: 6px; 
+      }
+    }
+
+    /* ============ TOOLS & ROADMAP ============ */
+    .tools-grid {
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: var(--space-3);
+    }
+    
+    .tool-chip {
+      display: inline-flex; 
+      align-items: center; 
+      gap: var(--space-2);
+      padding: var(--space-2) var(--space-4);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-full);
+      font-size: var(--text-sm); 
+      font-weight: 500;
+      color: var(--color-text-muted);
+      transition: all var(--transition-interactive);
+    }
+    
+    .tool-chip:hover { 
+      border-color: var(--color-primary); 
+      color: var(--color-primary); 
+      background: var(--color-primary-highlight); 
+    }
+    
+    .tool-chip.learning {
+      border-color: oklch(from var(--color-primary) l c h / 0.35);
+      color: var(--color-primary);
+      background: oklch(from var(--color-primary) l c h / 0.05);
+    }
+    
+    .tools-section-title {
+      font-family: var(--font-body);
+      font-size: var(--text-xs); 
+      font-weight: 700;
+      letter-spacing: 0.1em; 
+      text-transform: uppercase;
+      color: var(--color-text-faint);
+      margin-bottom: var(--space-3); 
+      margin-top: var(--space-6);
+    }
+
+    /* Roadmap Cards */
+    .roadmap-grid { 
+      display: grid; 
+      gap: var(--space-4); 
+      margin-top: var(--space-8); 
+    }
+    
+    .layer-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-5) var(--space-6);
+      transition: box-shadow var(--transition-interactive), border-color var(--transition-interactive);
+    }
+    
+    .layer-card:hover { 
+      box-shadow: var(--shadow-md); 
+      border-color: var(--color-primary); 
+    }
+    
+    .layer-header { 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: flex-end; 
+      margin-bottom: var(--space-4); 
+      flex-wrap: wrap; 
+      gap: var(--space-2); 
+    }
+    
+    .layer-title { 
+      font-family: var(--font-display); 
+      font-size: var(--text-xl); 
+      font-weight: 700; 
+      color: var(--color-text); 
+    }
+    
+    .layer-body { 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: var(--space-2); 
+    }
+
+    /* ============ CERTIFICATIONS ============ */
+    .certs-grid { 
+      display: flex; 
+      flex-direction: column; 
+      gap: var(--space-3); 
+    }
+    
+    .cert-row {
+      display: grid;
+      grid-template-columns: 180px 100px 1fr auto;
+      align-items: center;
+      gap: var(--space-4);
+      padding: var(--space-4) var(--space-5);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      transition: box-shadow var(--transition-interactive), border-color var(--transition-interactive);
+    }
+    
+    .cert-row:hover { 
+      box-shadow: var(--shadow-sm); 
+      border-color: var(--color-primary); 
+    }
+    
+    .cert-name { 
+      font-size: var(--text-sm); 
+      font-weight: 700; 
+      color: var(--color-text); 
+    }
+    
+    .cert-sub { 
+      font-size: var(--text-xs); 
+      color: var(--color-text-muted); 
+      margin-top: 2px; 
+    }
+    
+    .cert-level {
+      font-size: var(--text-xs); 
+      font-weight: 600;
+      letter-spacing: 0.06em; 
+      text-transform: uppercase;
+      padding: var(--space-1) var(--space-3);
+      border-radius: var(--radius-full);
+      text-align: center;
+      white-space: nowrap;
+    }
+    
+    .cert-level.done { 
+      background: oklch(from var(--color-success, #437a22) l c h / 0.12); 
+      color: #437a22; 
+    }
+    
+    [data-theme="dark"] .cert-level.done { 
+      background: oklch(0.65 0.12 130 / 0.15); 
+      color: #6daa45; 
+    }
+    
+    .cert-level.now { 
+      background: var(--color-primary-highlight); 
+      color: var(--color-primary); 
+    }
+    
+    .cert-level.soon { 
+      background: var(--color-surface-2); 
+      color: var(--color-text); 
+    }
+    
+    .cert-level.mid { 
+      background: var(--color-surface-2); 
+      color: var(--color-text-muted); 
+    }
+    
+    .cert-level.long { 
+      background: var(--color-surface-offset); 
+      color: var(--color-text-faint); 
+    }
+    
+    .cert-why { 
+      font-size: var(--text-xs); 
+      color: var(--color-text-muted); 
+      line-height: 1.55; 
+      max-width: 42ch; 
+    }
+    
+    .cert-badge {
+      font-size: var(--text-xs); 
+      font-weight: 700;
+      text-transform: uppercase; 
+      letter-spacing: 0.06em;
+      color: var(--color-text-faint);
+      white-space: nowrap;
+    }
+    
+    .cert-badge.fundamental { color: var(--color-blue, #006494); }
+    .cert-badge.associate { color: var(--color-primary); }
+    .cert-badge.expert { color: var(--color-warning, #964219); }
+    
+    [data-theme="dark"] .cert-badge.fundamental { color: #5591c7; }
+    [data-theme="dark"] .cert-badge.expert { color: #bb653b; }
+    
+    @media (max-width: 768px) {
+      .cert-row { 
+        grid-template-columns: 1fr auto; 
+        gap: var(--space-3); 
+      }
+      .cert-why { 
+        display: none; 
+      }
+    }
+
+    /* ============ PORTFOLIO ============ */
+    .portfolio-tabs {
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: var(--space-2);
+      margin-bottom: var(--space-8);
+      border-bottom: 1px solid var(--color-divider);
+      padding-bottom: var(--space-3);
+    }
+    
+    .tab-btn {
+      padding: var(--space-2) var(--space-4);
+      border-radius: var(--radius-md);
+      font-size: var(--text-sm); 
+      font-weight: 500;
+      color: var(--color-text-muted);
+      background: transparent; 
+      border: none;
+      cursor: pointer;
+      transition: all var(--transition-interactive);
+    }
+    
+    .tab-btn:hover { 
+      background: var(--color-surface-2); 
+      color: var(--color-text); 
+    }
+    
+    .tab-btn.active { 
+      background: var(--color-primary); 
+      color: var(--color-text-inverse); 
+    }
+
+    .portfolio-panel { 
+      display: none; 
+    }
+    
+    .portfolio-panel.active { 
+      display: block; 
+    }
+
+    .portfolio-panel .panel-description {
+      font-size: var(--text-base);
+      color: var(--color-text-muted);
+      max-width: 70ch;
+      margin-bottom: var(--space-6);
+      line-height: 1.7;
+    }
+    
+    .portfolio-panel .panel-note {
+      font-size: var(--text-xs);
+      color: var(--color-text-faint);
+      background: var(--color-surface);
+      border: 1px solid var(--color-divider);
+      border-radius: var(--radius-lg);
+      padding: var(--space-3) var(--space-4);
+      margin-bottom: var(--space-6);
+      max-width: 70ch;
+    }
+    
+    .portfolio-panel .panel-tools {
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: var(--space-2);
+      margin-bottom: var(--space-6);
+    }
+    
+    .tool-tag {
+      font-size: var(--text-xs); 
+      font-weight: 600;
+      letter-spacing: 0.06em; 
+      text-transform: uppercase;
+      color: var(--color-primary);
+      background: var(--color-primary-highlight);
+      padding: var(--space-1) var(--space-3);
+      border-radius: var(--radius-full);
+    }
+
+    .project-list { 
+      display: flex; 
+      flex-direction: column; 
+      gap: var(--space-4); 
+    }
+    
+    .project-card {
+      display: flex; 
+      align-items: flex-start; 
+      gap: var(--space-5);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-5) var(--space-6);
+      transition: box-shadow var(--transition-interactive), border-color var(--transition-interactive), transform var(--transition-interactive);
+    }
+    
+    .project-card:hover { 
+      box-shadow: var(--shadow-md); 
+      border-color: var(--color-primary); 
+      transform: translateY(-2px); 
+    }
+    
+    .project-icon {
+      width: 44px; 
+      height: 44px; 
+      flex-shrink: 0;
+      background: var(--color-primary-highlight);
+      border-radius: var(--radius-lg);
+      display: flex; 
+      align-items: center; 
+      justify-content: center;
+      color: var(--color-primary);
+    }
+    
+    .project-info { 
+      flex: 1; 
+    }
+    
+    .project-title {
+      font-family: var(--font-body);
+      font-size: var(--text-base); 
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: var(--space-1);
+    }
+    
+    .project-desc {
+      font-size: var(--text-sm); 
+      color: var(--color-text-muted); 
+      line-height: 1.6;
+    }
+    
+    .project-link {
+      display: inline-flex; 
+      align-items: center; 
+      gap: var(--space-1);
+      margin-top: var(--space-3);
+      font-size: var(--text-xs); 
+      font-weight: 600;
+      color: var(--color-primary);
+      letter-spacing: 0.04em;
+    }
+    
+    .project-link:hover { 
+      gap: var(--space-2); 
+    }
+    
+    .coming-soon {
+      display: flex; 
+      flex-direction: column; 
+      align-items: center; 
+      text-align: center;
+      padding: var(--space-16) var(--space-8);
+      color: var(--color-text-faint);
+    }
+    
+    .coming-soon-icon { 
+      font-size: 2.5rem; 
+      margin-bottom: var(--space-4); 
+    }
+    
+    .coming-soon h3 { 
+      font-size: var(--text-lg); 
+      color: var(--color-text-muted); 
+      margin-bottom: var(--space-2); 
+    }
+    
+    .coming-soon p { 
+      font-size: var(--text-sm); 
+      max-width: 36ch; 
+    }
+
+    /* ============ CONTACT ============ */
+    .contact-grid {
+      display: grid; 
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(var(--space-8), 6vw, var(--space-16));
+    }
+    
+    .contact-info { 
+      padding-top: var(--space-4); 
+    }
+    
+    .contact-item {
+      display: flex; 
+      align-items: center; 
+      gap: var(--space-4);
+      padding: var(--space-4) 0;
+      border-bottom: 1px solid var(--color-divider);
+    }
+    
+    .contact-item:last-child { 
+      border-bottom: none; 
+    }
+    
+    .contact-icon {
+      width: 40px; 
+      height: 40px; 
+      flex-shrink: 0;
+      background: var(--color-surface-2);
+      border-radius: var(--radius-lg);
+      display: flex; 
+      align-items: center; 
+      justify-content: center;
+      color: var(--color-primary);
+    }
+    
+    .contact-item a { 
+      color: var(--color-text-muted); 
+      font-size: var(--text-sm); 
+    }
+    
+    .contact-item a:hover { 
+      color: var(--color-primary); 
+    }
+    
+    .contact-form { 
+      display: flex; 
+      flex-direction: column; 
+      gap: var(--space-4); 
+    }
+    
+    .form-row { 
+      display: grid; 
+      grid-template-columns: 1fr 1fr; 
+      gap: var(--space-4); 
+    }
+    
+    .form-group { 
+      display: flex; 
+      flex-direction: column; 
+      gap: var(--space-2); 
+    }
+    
+    .form-group label { 
+      font-size: var(--text-xs); 
+      font-weight: 600; 
+      letter-spacing: 0.06em; 
+      text-transform: uppercase; 
+      color: var(--color-text-muted); 
+    }
+    
+    .form-group input, 
+    .form-group textarea {
+      padding: var(--space-3) var(--space-4);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      font-size: var(--text-sm);
+      color: var(--color-text);
+      transition: border-color var(--transition-interactive), box-shadow var(--transition-interactive);
+    }
+    
+    .form-group input:focus, 
+    .form-group textarea:focus {
+      outline: none; 
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 3px oklch(from var(--color-primary) l c h / 0.12);
+    }
+    
+    .form-group textarea { 
+      resize: vertical; 
+      min-height: 120px; 
+    }
+    
+    .form-submit {
+      padding: var(--space-3) var(--space-8);
+      background: var(--color-primary); 
+      color: var(--color-text-inverse);
+      border-radius: var(--radius-full); 
+      font-size: var(--text-sm);
+      font-weight: 600; 
+      cursor: pointer; 
+      letter-spacing: 0.04em;
+      align-self: flex-start;
+      transition: background var(--transition-interactive);
+      border: none;
+    }
+    
+    .form-submit:hover { 
+      background: var(--color-primary-hover); 
+    }
+
+    /* ============ FOOTER ============ */
+    footer {
+      padding: var(--space-10) clamp(var(--space-6), 5vw, var(--space-12));
+      border-top: 1px solid var(--color-divider);
+      display: flex; 
+      flex-wrap: wrap; 
+      align-items: center; 
+      justify-content: space-between;
+      gap: var(--space-4);
+    }
+    
+    .footer-brand {
+      font-family: var(--font-display); 
+      font-weight: 700;
+      font-size: var(--text-base);
+    }
+    
+    .footer-links { 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: var(--space-4); 
+    }
+    
+    .footer-links a { 
+      font-size: var(--text-sm); 
+      color: var(--color-text-muted); 
+    }
+    
+    .footer-links a:hover { 
+      color: var(--color-primary); 
+    }
+    
+    .footer-copy { 
+      font-size: var(--text-xs); 
+      color: var(--color-text-faint); 
+      width: 100%; 
+    }
+
+    /* ============ MOBILE ============ */
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      
+      .nav-links.open {
+        display: flex; 
+        flex-direction: column; 
+        gap: var(--space-4);
+        position: fixed; 
+        top: 5rem; 
+        left: 0; 
+        right: 0;
+        background: var(--color-surface);
+        padding: var(--space-6);
+        border-bottom: 1px solid var(--color-divider);
+      }
+      
+      .nav-links.open ~ .nav-cta { display: none; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-visual { aspect-ratio: unset; max-height: none; height: auto; }
+      .about-visual-inner { padding: var(--space-5); }
+      .about-avatar { width: 72px; height: 72px; font-size: 1.8rem; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .hero-title { font-size: clamp(2.5rem, 12vw, 5rem); }
+    }
+    
+    /* ============ SCROLL ANIMATIONS ============ */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    
+    .fade-up.visible { 
+      opacity: 1; 
+      transform: translateY(0); 
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <a href="#home" class="nav-logo" aria-label="Darius Chiosa Chiosa home">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+        <rect width="28" height="28" rx="7" fill="var(--color-primary)"/>
+        <path d="M8 8h5.5c3.6 0 6.5 2.7 6.5 6.2S17.1 20 13.5 20H8V8z" fill="var(--color-text-inverse)" opacity="0.95"/>
+        <circle cx="19.5" cy="19.5" r="2.5" fill="var(--color-text-inverse)" opacity="0.6"/>
+      </svg>
+      Darius Chiosa Chiosa
+    </a>
+    <ul class="nav-links" id="navLinks" role="list">
+      <li><a href="#about">Who Am I</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#roadmap">Roadmap</a></li>
+      <li><a href="#certifications">Certs</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" data-theme-toggle aria-label="Switch to light mode">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      </button>
+      <a href="#contact" class="nav-cta">Get in Touch</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="hero" id="home" aria-labelledby="hero-title">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <p class="hero-eyebrow">Tech · Business · Data</p>
+    <h1 class="hero-title" id="hero-title">Darius <em>Chiosa Chiosa</em></h1>
+    <p class="hero-subtitle">22 y/o. Romanian roots, raised in Spain.<br>Building at the intersection of data, business & technology.</p>
+    <div class="hero-actions">
+      <a href="#portfolio" class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        View Portfolio
+      </a>
+      <a href="#about" class="btn-ghost">Who Am I</a>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">
+      <div class="hero-scroll-line"></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  <section class="section" id="about" aria-labelledby="about-title">
+    <div class="section-inner">
+      <div class="about-grid">
+        <div class="about-text fade-up">
+          <p class="section-label">Who Am I</p>
+          <h2 class="section-title" id="about-title">Architect-Translator:<br>Bridging Tech & Business</h2>
+          <p>I'm a 22-year-old of Romanian origin, raised in Spain. As a hybrid profile between Business and Technology, I'm passionate about translating technical infrastructure into financial profitability (ROI, FinOps) within the Cloud ecosystem.</p>
+          <p>With a foundation in competitive sports (Taekwondo and Basketball), I built the discipline I now apply to business. I hold a degree in Marketing and Market Research (UMA), an MBA, and I'm currently studying Web Application Development (DAW) and transitioning into Software Engineering, with an open and ambitious outlook toward my long-term trajectory in STEM fields.</p>
+          <p>Trilingual, proactive, and results-oriented, my goal is to provide immediate strategic value as the bridge between business needs and technical execution.</p>
+          
+          <div class="hero-actions" style="margin-top: var(--space-6);">
+            <a href="https://www.linkedin.com/in/darius-chiosa" target="_blank" rel="noopener noreferrer" class="btn-ghost">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              LinkedIn
+            </a>
+            <a href="https://github.com/Dariuscc-dev" target="_blank" rel="noopener noreferrer" class="btn-ghost">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+        <div class="about-visual fade-up">
+          <div class="about-visual-inner">
+            <img src="foto-linkedin.jpg" alt="Darius Chiosa Chiosa" class="about-avatar" style="object-fit: cover;">
+            <p style="font-family: var(--font-display); font-size: var(--text-lg); font-weight: 700; margin-bottom: var(--space-2);">Darius Chiosa Chiosa</p>
+            <p style="font-size: var(--text-sm); color: var(--color-text-muted);">Tech & Business · Málaga, Spain</p>
+            <div class="about-stats">
+              <div class="stat-card">
+                <div class="stat-number">22</div>
+                <div class="stat-label">Years old</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">3+</div>
+                <div class="stat-label">Years Exp.</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">3</div>
+                <div class="stat-label">Languages</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">🏆</div>
+                <div class="stat-label">Honors (TFG)</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">+10</div>
+                <div class="stat-label">Projects</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fade-up">
+        <h3 class="experience-section-title">Professional Experience</h3>
+        <div class="experience-list">
+          <div class="exp-item">
+            <div class="exp-date">Jan 2026 - Present</div>
+            <div>
+              <h4 class="exp-role">Treatment Coordinator & Sales <span class="exp-company">@ Impress (Health Tech)</span></h4>
+              <p class="exp-desc">Comprehensive sales cycle management and structured financial advising maximizing ROI. Direct cross-functional collaboration and operational optimization for hybrid clinics using AI solutions, HubSpot, Odoo, and Salesforce.</p>
+              <p class="exp-desc">º Interim Clinic Management: Appointed as Interim Clinic Manager for the Marbella location to ensure seamless operational continuity. Led daily operations and local team coordination, gaining intensive, hands-on experience in leadership and high-level clinic management.</p>
+            </div>
+          </div>
+          <div class="exp-item">
+            <div class="exp-date">Mar 2025 - Sep 2025</div>
+            <div>
+              <h4 class="exp-role">Business & Sales Analyst <span class="exp-company">@ La Zambra Resort 5* GL</span></h4>
+              <p class="exp-desc">Strategic KPI analysis (ADR, RevPAR, conversion) and BI dashboard creation (Tableau). Explored and implemented AI workflows and prompt engineering focused on data analysis, marketing, and operational efficiency (SOPs).</p>
+            </div>
+          </div>
+          <div class="exp-item">
+            <div class="exp-date">Jan 2021 - Jul 2024</div>
+            <div>
+              <h4 class="exp-role">Founder & Digital Marketing Consultant <span class="exp-company">@ Fly Vip Marketing</span></h4>
+              <p class="exp-desc">Technical launch and comprehensive management of 2 e-commerce platforms. Digital strategy, SEM campaigns (Google/YouTube Ads), and ROI optimization through traffic analytics.</p>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="experience-section-title" style="margin-top: var(--space-12);">Education & Certifications</h3>
+        <div class="experience-list">
+          <div class="exp-item">
+            <div class="exp-date">Feb 2026 - Jul 2031</div>
+            <div>
+              <h4 class="exp-role">FP DAW (AI & ML Specialization) + Software Engineering <span class="exp-company">@ UTAMED</span></h4>
+              <p class="exp-desc">Formal technical transition covering full-stack web application development, applied artificial intelligence & machine learning, and a complete degree in Software Engineering.</p>
+            </div>
+          </div>
+          <div class="exp-item">
+            <div class="exp-date">Jul 2025 - Present</div>
+            <div>
+              <h4 class="exp-role">Technical Specialization <span class="exp-company">@ DataCamp</span></h4>
+              <p class="exp-desc">Focused curriculum on Business Intelligence, Python, Machine Learning, and advanced SQL data modeling.</p>
+            </div>
+          </div>
+          <div class="exp-item">
+            <div class="exp-date">Sep 2022 - Jun 2026</div>
+            <div>
+              <h4 class="exp-role">Degree in Marketing & Market Research <span class="exp-company">@ Universidad de Málaga</span></h4>
+              <p class="exp-desc">Graduated with 'Matrícula de Honor' (Highest Distinction) for my Quantitative Finance Bachelor's Thesis.</p>
+            </div>
+          </div>
+          <div class="exp-item">
+            <div class="exp-date">2024</div>
+            <div>
+              <h4 class="exp-role">MBA & Master in Digital Marketing <span class="exp-company">@ ThePower</span></h4>
+              <p class="exp-desc">Business Administration framework and modern digital marketing strategies.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" role="separator"></div>
+
+  <section class="section" id="portfolio" aria-labelledby="portfolio-title">
+    <div class="section-inner">
+      <p class="section-label">Portfolio</p>
+      <h2 class="section-title" id="portfolio-title">My Work</h2>
+      <p class="section-description">A selection of academic, analytical and technical projects covering data science, financial modelling, BI and AI.</p>
+
+      <nav class="portfolio-tabs" aria-label="Portfolio categories" role="tablist">
+        <button class="tab-btn active" id="tab-btn-academic" role="tab" aria-selected="true" data-tab="academic" aria-controls="tab-academic">Academic Projects</button>
+        <button class="tab-btn" id="tab-btn-bi" role="tab" aria-selected="false" data-tab="bi" aria-controls="tab-bi">Business Intelligence</button>
+        <button class="tab-btn" id="tab-btn-excel" role="tab" aria-selected="false" data-tab="excel" aria-controls="tab-excel">Excel & Finance</button>
+        <button class="tab-btn" id="tab-btn-python" role="tab" aria-selected="false" data-tab="python" aria-controls="tab-python">Python</button>
+        <button class="tab-btn" id="tab-btn-ai" role="tab" aria-selected="false" data-tab="ai" aria-controls="tab-ai">AI</button>
+        <button class="tab-btn" id="tab-btn-web" role="tab" aria-selected="false" data-tab="web" aria-controls="tab-web">Web Development</button>
+      </nav>
+
+      <div class="portfolio-panel active fade-up" id="tab-academic" role="tabpanel" aria-labelledby="tab-btn-academic">
+        <p class="panel-description">Academic projects from my Marketing & Market Research degree at UMA — from award-winning market research to macroeconomic forecasting as Trump takes power. Using tools like Statgraphics, SPSS, Gretl and Excel.</p>
+        <div class="panel-note">⚠️ Some projects mix Spanish and English, and some databases may be incomplete — these are archives of my favourite subjects, originally not intended as portfolio pieces.</div>
+        <div class="panel-tools">
+          <span class="tool-tag">SPSS</span><span class="tool-tag">Gretl</span><span class="tool-tag">Statgraphics</span>
+          <span class="tool-tag">Excel</span><span class="tool-tag">Google Trends</span><span class="tool-tag">ANOVA</span>
+          <span class="tool-tag">Cluster Analysis</span><span class="tool-tag">Factor Analysis</span><span class="tool-tag">Econometrics</span>
+        </div>
+        <div class="project-list">
+          <div class="project-card">
+            <div class="project-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Bachelor's Thesis: Quantitative Model for BME Growth 🏆</h3>
+              <p class="project-desc">Awarded <em>Summa Cum Laude</em> (Highest Distinction). My final degree project pioneering the <strong>world's first Fear & Greed Index engineered specifically for Spanish micro-cap and illiquid markets</strong>. A comprehensive academic research piece combining deep statistical modeling, Python-driven algorithmic backtesting, and Power BI visualization.</p>
+              <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: var(--space-3);">
+                <a href="https://drive.google.com/drive/folders/1DeKmp8fAhwGKZO3F1cZQsOsExFoDgGBV?usp=sharing" target="_blank" rel="noopener noreferrer" class="project-link" style="margin-top: 0;">View Research & Code →</a>
+                <a href="https://drive.google.com/drive/folders/10EBKLnpA2Ls1BQUBWsiKPvsR7QmgOEFg?usp=sharing" target="_blank" rel="noopener noreferrer" class="project-link" style="margin-top: 0;">View BI Dashboard →</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Macroeconomic & Trade Effects of U.S. Tariff Policies on the Automotive Sector</h3>
+              <p class="project-desc">International Business project forecasting macroeconomic impact of Trump-era tariff policies on the automotive industry. Trade flow analysis and economic modelling.</p>
+              <a href="https://drive.google.com/drive/folders/15zRlceGbsJEURXPFMY8coEdrgKFDja7W?usp=sharing" target="_blank" rel="noopener noreferrer" class="project-link">View Project →</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Market Research I — Award-Winning Project 🏆</h3>
+              <p class="project-desc">Chi-Square tests, Crossed Tables, Descriptive & Frequency Analysis. This project won an award during my studies.</p>
+              <a href="https://drive.google.com/drive/folders/1wqr-lpQYnpAebhX10gm0P1qmqjXkXzH5?usp=sharing" target="_blank" rel="noopener noreferrer" class="project-link">View Project →</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Market Research II — Advanced Statistical Methods</h3>
+              <p class="project-desc">ANOVA, Cluster Analysis, Correspondence Analysis, Binary Logistic Regression and Factor Analysis applied to real market data.</p>
+              <a href="https://drive.google.com/drive/folders/1UtoiLqJzL2Yb-FSJ9VVKsl2ObA-cdZZc?usp=sharing" target="_blank" rel="noopener noreferrer" class="project-link">View Project →</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Multivariate Statistics — Deep Analysis</h3>
+              <p class="project-desc">Normality tests, Quantile-Quantile plots, Chi-Square, Levene tests, Homoscedasticity, Principal Component Analysis, Sedimentation Graphics and more.</p>
+              <a href="https://drive.google.com/drive/folders/1PXPjV-p3PS7RYz6QK0BCf-O6XKAAd9l5?usp=sharing" target="_blank" rel="noopener noreferrer" class="project-link">View Project →</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Business Creation — Full Venture Analysis</h3>
+              <p class="project-desc">Cash Flow modelling, Business Model Canvas, DuPont Analysis, and full financial structuring for a new business venture.</p>
+              <a href="https://drive.google.com/drive/folders/1TpiPW9R_qNyXtlueTlTlJOQiUBbhvN9L?usp=sharing" target="_blank" rel="noopener noreferrer" class="project-link">View Project →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-panel" id="tab-bi" role="tabpanel" aria-labelledby="tab-btn-bi">
+        <p class="panel-description">Business Intelligence projects using Power BI to summarise complex databases and extract actionable insights for real business scenarios.</p>
+        <div class="panel-tools">
+          <span class="tool-tag">Power BI</span><span class="tool-tag">DAX</span><span class="tool-tag">Data Modelling</span>
+        </div>
+        <div class="project-list">
+          <div class="project-card">
+            <div class="project-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Bachelor's Thesis: BME Growth Predictive Dashboard 🏆</h3>
+              <p class="project-desc">Awarded <em>Summa Cum Laude</em> (Highest Distinction). This dashboard is the Business Intelligence frontend of a groundbreaking quantitative model: <strong>the world's first Fear & Greed Index adapted for illiquid markets</strong>, specifically targeting the Spanish IBEX Growth Market 15. It visually translates complex quantitative signals and historical backtesting into clear, actionable financial insights.</p>
+              <a href="https://drive.google.com/drive/folders/10EBKLnpA2Ls1BQUBWsiKPvsR7QmgOEFg?usp=sharing" target="_blank" rel="noopener noreferrer" class="project-link">View BI Dashboard →</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Customer Churn Analysis — Databel Telecom</h3>
+              <p class="project-desc">Power BI dashboard analysing customer churn patterns for a telecom company. Identifies key churn drivers and customer segments at risk.</p>
+              <a href="https://drive.google.com/drive/folders/1nlnH8X5aWfPsejfVD8SiSoyv_q_-q6vp?usp=sharing" target="_blank" rel="noopener noreferrer" class="project-link">View Project →</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">HR Analytics — Atlas Labs</h3>
+              <p class="project-desc">Human Resources analytics dashboard for Atlas Labs. Explores workforce composition, attrition rates, performance and diversity metrics using Power BI.</p>
+              <a href="https://drive.google.com/drive/folders/120m2IQ0YMJ2GZ3cjMbVJYzQadJn53Yky?usp=sharing" target="_blank" rel="noopener noreferrer" class="project-link">View Project →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-panel" id="tab-excel" role="tabpanel" aria-labelledby="tab-btn-excel">
+        <p class="panel-description">Excel-based financial modelling projects covering company valuation, stock analysis and investment frameworks. Excel remains a central tool in finance and business strategy.</p>
+        <div class="panel-tools">
+          <span class="tool-tag">Excel</span><span class="tool-tag">Financial Modelling</span><span class="tool-tag">DCF</span><span class="tool-tag">Valuation</span>
+        </div>
+        <div class="project-list">
+          <div class="project-card">
+            <div class="project-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Stock Valuation & Discount Methods — GOOGL</h3>
+              <p class="project-desc">Complete stock valuation model using Google (GOOGL) as a case study. Applies multiple discount and valuation methodologies including DCF, comparable companies and growth parameters.</p>
+              <a href="https://docs.google.com/spreadsheets/d/1Fk9QbS3k-b4bc6tBsIXnHmJ7AYvTCrOfNEIe3-mpcxg/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="project-link">View Project →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-panel" id="tab-python" role="tabpanel" aria-labelledby="tab-btn-python">
+        <p class="panel-description">Python-driven analytical models, data extraction pipelines, and quantitative algorithms to solve complex financial and business problems.</p>
+        <div class="panel-tools">
+          <span class="tool-tag">Python</span><span class="tool-tag">Pandas</span><span class="tool-tag">Quantitative Finance</span>
+        </div>
+        <div class="project-list">
+          <div class="project-card">
+            <div class="project-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Bachelor's Thesis: Algorithmic Model for BME Growth 🏆</h3>
+              <p class="project-desc">Awarded <em>Summa Cum Laude</em> (Highest Distinction). This project pioneers the <strong>first-ever Fear & Greed Index engineered specifically for Spanish micro-cap and illiquid markets</strong>. Aquí encontrarás la arquitectura central de Python, incluyendo la extracción de datos, procesamiento estadístico y lógica algorítmica.</p>
+              <a href="https://drive.google.com/drive/folders/1DeKmp8fAhwGKZO3F1cZQsOsExFoDgGBV?usp=sharing" target="_blank" rel="noopener noreferrer" class="project-link">View Python Scripts →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-panel" id="tab-ai" role="tabpanel" aria-labelledby="tab-btn-ai">
+        <div class="coming-soon">
+          <div class="coming-soon-icon">🤖</div>
+          <h3>AI Projects Coming Soon</h3>
+          <p>Building projects that apply AI, Deep Learning, Machine Learning and Cloud AI Infrastructure to solve hard real-world problems.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-panel" id="tab-web" role="tabpanel" aria-labelledby="tab-btn-web">
+        <p class="panel-description">Web development projects focused on clean code, semantic structure, and foundational web technologies.</p>
+        <div class="panel-tools">
+          <span class="tool-tag">HTML</span><span class="tool-tag">CSS</span><span class="tool-tag">Web Development</span>
+        </div>
+        <div class="project-list">
+          
+          <div class="project-card">
+            <div class="project-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Living Web Stack — CSS Layouts & Styling</h3>
+              <p class="project-desc">The second layer of my web development learning path. A deep dive into modern CSS, covering layout techniques (Flexbox & Grid), responsive design principles, design tokens, and UI styling directly from scratch.</p>
+              <a href="https://github.com/Dariuscc-dev/living-web-stack/tree/main/02-css" target="_blank" rel="noopener noreferrer" class="project-link">View Repository →</a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Basic Semantic HTML</h3>
+              <p class="project-desc">My first time working with HTML. Built exclusively with native semantic HTML, without CSS or JavaScript, to demonstrate a solid understanding of core web structure and tag programming.</p>
+              <a href="https://github.com/Dariuscc-dev/Basic-Semantic-HTML" target="_blank" rel="noopener noreferrer" class="project-link">View Repository →</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider" role="separator"></div>
+
+  <section class="section" id="tools" aria-labelledby="tools-title">
+    <div class="section-narrow fade-up">
+      <p class="section-label">Skills & Stack</p>
+      <h2 class="section-title" id="tools-title">Tools I work with</h2>
+      <p class="section-description">A mix of statistical, analytical, BI and dev tools — some mastered, some actively learning.</p>
+
+      <h3 class="tools-section-title">Languages</h3>
+      <div class="tools-grid">
+        <span class="tool-chip">DAX</span>
+        <span class="tool-chip">M</span>
+        <span class="tool-chip learning">Python <small>· Learning</small></span>
+        <span class="tool-chip learning">SQL <small>· Learning</small></span>
+        <span class="tool-chip">HTML</span>
+        <span class="tool-chip">CSS</span>
+        <span class="tool-chip learning">JavaScript <small>· Learning</small></span>
+      </div>
+
+      <h3 class="tools-section-title">Data, BI & Cloud</h3>
+      <div class="tools-grid">
+        <span class="tool-chip">Power BI <small>· PL-300 ✓</small></span>
+        <span class="tool-chip">Microsoft Fabric</span>
+        <span class="tool-chip">Azure Cloud</span>
+        <span class="tool-chip">Tableau</span>
+        <span class="tool-chip">Excel</span>
+      </div>
+
+      <h3 class="tools-section-title">Statistics & Research</h3>
+      <div class="tools-grid">
+        <span class="tool-chip">SPSS</span>
+        <span class="tool-chip">Gretl</span>
+        <span class="tool-chip">Statgraphics</span>
+        <span class="tool-chip">Google Trends</span>
+        <span class="tool-chip">Google Analytics</span>
+      </div>
+
+      <h3 class="tools-section-title">Business & AI</h3>
+      <div class="tools-grid">
+        <span class="tool-chip">ROI & FinOps</span>
+        <span class="tool-chip">Prompt Engineering</span>
+        <span class="tool-chip">Sales Pipeline Mgt</span>
+        <span class="tool-chip">HubSpot</span>
+        <span class="tool-chip">Odoo</span>
+        <span class="tool-chip">Salesforce</span>
+        <span class="tool-chip">Gemini / Claude / Perplexity</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" role="separator"></div>
+
+  <section class="section" id="roadmap" aria-labelledby="roadmap-title">
+    <div class="section-narrow fade-up">
+      <p class="section-label">Development Roadmap</p>
+      <h2 class="section-title" id="roadmap-title">Living Web Stack Path</h2>
+      <p class="section-description">My structured technical roadmap spanning 5 layers: from foundational web technologies to cloud infrastructure and CI/CD automation.</p>
+
+      <div class="roadmap-grid">
+        <div class="layer-card" style="border-color: var(--color-primary); box-shadow: 0 0 0 1px oklch(from var(--color-primary) l c h / 0.25);">
+          <div class="layer-header">
+            <h3 class="layer-title">Layer 1: Web Fundamentals</h3>
+            <span style="font-size: var(--text-xs); color: var(--color-primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em;">▶ Current Stage (Focusing on JavaScript)</span>
+          </div>
+          <div class="layer-body">
+            <span class="tool-tag">HTML</span><a href="https://github.com/Dariuscc-dev/living-web-stack/tree/main/02-css" target="_blank" rel="noopener noreferrer" class="tool-tag" style="text-decoration: none; transition: transform var(--transition-interactive); display: inline-block;">CSS</a><span class="tool-tag" style="background: var(--color-primary); color: var(--color-text-inverse); display: inline-block;">JavaScript</span><span class="tool-tag">HTTP/HTTPS</span><span class="tool-tag">TLS/SSL</span>
+          </div>
+        </div>
+
+        <div class="layer-card">
+          <div class="layer-header">
+            <h3 class="layer-title">Layer 2: Logic & Data</h3>
+          </div>
+          <div class="layer-body">
+            <span class="tool-tag">Python</span><span class="tool-tag">SQL</span><span class="tool-tag">REST APIs</span><span class="tool-tag">CORS</span>
+          </div>
+        </div>
+
+        <div class="layer-card">
+          <div class="layer-header">
+            <h3 class="layer-title">Layer 3: Networks & Security</h3>
+          </div>
+          <div class="layer-body">
+            <span class="tool-tag">TCP/IP</span><span class="tool-tag">DNS Flow</span>
+          </div>
+        </div>
+
+        <div class="layer-card">
+          <div class="layer-header">
+            <h3 class="layer-title">Layer 4: Infrastructure</h3>
+          </div>
+          <div class="layer-body">
+            <span class="tool-tag">Linux / Bash</span><span class="tool-tag">Git</span><span class="tool-tag">GitHub</span><span class="tool-tag">Docker</span>
+          </div>
+        </div>
+
+        <div class="layer-card">
+          <div class="layer-header">
+            <h3 class="layer-title">Layer 5: Automation & DevOps</h3>
+          </div>
+          <div class="layer-body">
+            <span class="tool-tag">CI / CD</span><span class="tool-tag">GitHub Actions</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" role="separator"></div>
+
+  <section class="section" id="certifications" aria-labelledby="certs-title">
+    <div class="section-narrow fade-up">
+      <p class="section-label">Cloud & Tech Certifications</p>
+      <h2 class="section-title" id="certs-title">Microsoft & Cloud Roadmap</h2>
+      <p class="section-description">Building a hybrid profile as a technical authority in Cloud Architecture, Data Engineering and Applied AI — from fundamentals to expert-level architecture design.</p>
+
+      <div class="certs-grid">
+        <div class="cert-row">
+          <div><h3 class="cert-name">PL-300</h3><div class="cert-sub">Power BI Data Analyst</div></div>
+          <span class="cert-badge associate">Associate</span>
+          <p class="cert-why">The end of the pipeline. Mastery of data analysis and visualization. Advantage for understanding data engineering.</p>
+          <span class="cert-level done">✓ Achieved</span>
+        </div>
+        
+        <div class="cert-row">
+          <div><h3 class="cert-name">AZ-900</h3><div class="cert-sub">Azure Fundamentals</div></div>
+          <span class="cert-badge fundamental">Fundamental</span>
+          <p class="cert-why">The foundation. Azure vocabulary and base structure. Everything built on top will now make sense.</p>
+          <span class="cert-level done">✓ Achieved</span>
+        </div>
+        
+        <div class="cert-row" style="border-color: var(--color-primary); box-shadow: 0 0 0 1px oklch(from var(--color-primary) l c h / 0.25);">
+          <div><h3 class="cert-name">SC-900</h3><div class="cert-sub">Security, Compliance & Identity</div></div>
+          <span class="cert-badge fundamental">Fundamental</span>
+          <p class="cert-why">The barrier to entry. Zero Trust, compliance, and identity. Security designed from the ground up.</p>
+          <span class="cert-level now">▶ 1-2 Weeks</span>
+        </div>
+        
+        <div class="cert-row">
+          <div><h3 class="cert-name">DP-700</h3><div class="cert-sub">Microsoft Fabric Data Engineer</div></div>
+          <span class="cert-badge associate">Associate</span>
+          <p class="cert-why">The natural connection. Integrating analytics; preparing and moving data for Power BI analysis.</p>
+          <span class="cert-level soon">Short-term</span>
+        </div>
+        
+        <div class="cert-row">
+          <div><h3 class="cert-name">AZ-104</h3><div class="cert-sub">Azure Administrator</div></div>
+          <span class="cert-badge associate">Associate</span>
+          <p class="cert-why">The controls. Infrastructure management, networking, storage, and compute (AZ-305 prerequisite).</p>
+          <span class="cert-level soon">Short-term</span>
+        </div>
+
+        <div class="cert-row">
+          <div><h3 class="cert-name">AI-300</h3><div class="cert-sub">AI & Machine Learning in Production</div></div>
+          <span class="cert-badge associate">Associate</span>
+          <p class="cert-why">MLOps & LLM/RAG integration. Taking AI from testing to stable, real-world systems.</p>
+          <span class="cert-level mid">Mid-term</span>
+        </div>
+
+        <div class="cert-row">
+          <div><h3 class="cert-name">DP-750</h3><div class="cert-sub">Data Engineering with Databricks</div></div>
+          <span class="cert-badge associate">Associate</span>
+          <p class="cert-why">The industry standard. Official MS engineering for Databricks. Open Lakehouse architecture.</p>
+          <span class="cert-level mid">Mid-term</span>
+        </div>
+
+        <div class="cert-row">
+          <div><h3 class="cert-name">Databricks Associate</h3><div class="cert-sub">Data Engineer</div></div>
+          <span class="cert-badge associate">Associate</span>
+          <p class="cert-why">(Optional) Ideal complement to DP-750. Valid for AWS/GCP, offering total cloud portability.</p>
+          <span class="cert-level mid">Mid-term</span>
+        </div>
+
+        <div class="cert-row">
+          <div><h3 class="cert-name">AI-103</h3><div class="cert-sub">AI Apps & Agents Development</div></div>
+          <span class="cert-badge associate">Associate</span>
+          <p class="cert-why">The future of agents. The "guts" of building autonomous workflows and multimodal systems.</p>
+          <span class="cert-level mid">Mid-term</span>
+        </div>
+        
+        <div class="cert-row">
+          <div><h3 class="cert-name">AZ-305</h3><div class="cert-sub">Azure Solutions Architect</div></div>
+          <span class="cert-badge expert">Expert</span>
+          <p class="cert-why">The Architect. High-level design decisions on cost, performance, and security for full projects.</p>
+          <span class="cert-level mid">Mid-term</span>
+        </div>
+
+        <div class="cert-row">
+          <div><h3 class="cert-name">AWS SAA-C03</h3><div class="cert-sub">AWS Solutions Architect</div></div>
+          <span class="cert-badge associate">Associate</span>
+          <p class="cert-why">Multicloud unlock. Opening doors to the largest cloud provider market globally.</p>
+          <span class="cert-level mid">Mid-term</span>
+        </div>
+
+        <div class="cert-row">
+          <div><h3 class="cert-name">AWS MLA-C01</h3><div class="cert-sub">AWS Machine Learning</div></div>
+          <span class="cert-badge associate">Associate</span>
+          <p class="cert-why">Extreme technical versatility mastering AI ecosystems on the two most powerful clouds.</p>
+          <span class="cert-level long">Mid-Long</span>
+        </div>
+
+        <div class="cert-row">
+          <div><h3 class="cert-name">SC-500</h3><div class="cert-sub">AI Security</div></div>
+          <span class="cert-badge associate">Associate</span>
+          <p class="cert-why">Proactive AI Defense. Security specifically applied to defending artificial intelligence environments.</p>
+          <span class="cert-level long">Long-term</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" role="separator"></div>
+
+  <section class="section" id="contact" aria-labelledby="contact-title">
+    <div class="section-inner">
+      <div class="contact-grid">
+        <div class="contact-info fade-up">
+          <p class="section-label">Contact</p>
+          <h2 class="section-title" id="contact-title">Let's work together</h2>
+          <p style="color: var(--color-text-muted); max-width: 44ch; margin-bottom: var(--space-8);">Feel free to reach out with inquiries, opportunities, questions or anything else. I'm always open to interesting conversations.</p>
+          <div>
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <div style="font-size: var(--text-xs); color: var(--color-text-faint); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 2px;">Email</div>
+                <a href="mailto:corina.dariusnicu@gmail.com">corina.dariusnicu@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </div>
+              <div>
+                <div style="font-size: var(--text-xs); color: var(--color-text-faint); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 2px;">LinkedIn</div>
+                <a href="https://www.linkedin.com/in/darius-chiosa" target="_blank" rel="noopener noreferrer">linkedin.com/in/darius-chiosa</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </div>
+              <div>
+                <div style="font-size: var(--text-xs); color: var(--color-text-faint); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 2px;">GitHub</div>
+                <a href="https://github.com/Dariuscc-dev" target="_blank" rel="noopener noreferrer">github.com/Dariuscc-dev</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <form action="https://formspree.io/f/meedkobl" method="POST" class="contact-form fade-up" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">Name *</label>
+              <input type="text" id="fname" name="fname" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lname" placeholder="Your last name">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" placeholder="Tell me about your project or inquiry..." required></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send Message</button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <footer role="contentinfo">
+    <span class="footer-brand">Darius Chiosa Chiosa</span>
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="#about">About</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#tools">Tools</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#certifications">Certs</a>
+      <a href="#contact">Contact</a>
+      <a href="https://www.linkedin.com/in/darius-chiosa" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/Dariuscc-dev" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </nav>
+    <p class="footer-copy">© 2026 Darius Chiosa Chiosa · Málaga, Spain · corina.dariusnicu@gmail.com</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Theme toggle
+      const themeToggleBtn = document.querySelector('[data-theme-toggle]');
+      const rootElement = document.documentElement;
+      let currentTheme = rootElement.getAttribute('data-theme') || 'dark';
+      
+      function updateThemeButton() {
+        if (!themeToggleBtn) return;
+        themeToggleBtn.setAttribute('aria-label', `Switch to ${currentTheme === 'dark' ? 'light' : 'dark'} mode`);
+        themeToggleBtn.innerHTML = currentTheme === 'dark'
+          ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
+          : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+      }
+      
+      updateThemeButton();
+      
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+          currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+          rootElement.setAttribute('data-theme', currentTheme);
+          updateThemeButton();
+        });
+      }
+
+      // Hamburger menu
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('navLinks');
+      
+      if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+          const isOpen = navLinks.classList.toggle('open');
+          hamburger.setAttribute('aria-expanded', String(isOpen));
+        });
+      }
+
+      // Portfolio tabs
+      const tabButtons = document.querySelectorAll('.tab-btn');
+      const portfolioPanels = document.querySelectorAll('.portfolio-panel');
+      
+      tabButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const tabId = btn.dataset.tab;
+          
+          // Reset buttons
+          tabButtons.forEach(b => {
+            b.classList.remove('active');
+            b.setAttribute('aria-selected', 'false');
+          });
+          
+          // Reset panels
+          portfolioPanels.forEach(p => {
+            p.classList.remove('active');
+          });
+          
+          // Activate current
+          btn.classList.add('active');
+          btn.setAttribute('aria-selected', 'true');
+          document.getElementById('tab-' + tabId).classList.add('active');
+        });
+      });
+
+      // Scroll animation
+      const observerOptions = {
+        threshold: 0.12
+      };
+      
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+      
+      document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    });
+  </script>
+</body>
+</html>
