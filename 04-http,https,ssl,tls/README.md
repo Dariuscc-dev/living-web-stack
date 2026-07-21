@@ -1,10 +1,10 @@
-# 🌐 Understanding HTTP, HTTPS, and SSL/TLS
+# Understanding HTTP, HTTPS, and SSL/TLS
 *(A look under the hood of web security)*
 
-## 🎯 The Goal
+## The Goal
 This repository documents my architectural understanding of how secure web communication works. My goal here is to lay the theoretical foundations: understanding the *why* and *how* of these protocols, without getting tangled up in low-level implementations for now.
 
-## 🥊 HTTP vs. HTTPS (The simple explanation)
+## HTTP vs. HTTPS (The simple explanation)
 
 To understand the fundamental difference, imagine you want to send an important document to someone by mail:
 
@@ -21,7 +21,7 @@ To understand the fundamental difference, imagine you want to send an important 
 
 ---
 
-## ⚙️ The guts of the system: The "Handshake"
+## The guts of the system: The "Handshake"
 
 HTTPS doesn't happen by magic. For your computer and the web server to create that secure tunnel, they have to agree on a process called the **Handshake**. This happens in a matter of milliseconds:
 
@@ -35,7 +35,7 @@ HTTPS doesn't happen by magic. For your computer and the web server to create th
 
 ---
 
-## 🚧 Project Status and Next Steps
+## Project Status and Next Steps
 
 Currently, I consider that I have fulfilled my initial plan: I have a solid understanding of the architecture and mechanics behind these protocols.
 
