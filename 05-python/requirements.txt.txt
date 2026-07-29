@@ -1,0 +1,6 @@
+requirements.txt
+
+
+# This project uses only Python Standard Library modules (json, os, uuid).
+# No external dependencies are required. 
+# Built with Python 3.x
