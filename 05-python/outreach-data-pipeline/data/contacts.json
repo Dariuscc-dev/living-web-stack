@@ -1,0 +1,58 @@
+[
+  {
+    "id": "USR-001",
+    "name": "Daan Van der Berg",
+    "email": "daan.v@qgroup.example.com",
+    "company": "QGroup",
+    "role": "Data Strategy Manager",
+    "source": "LinkedIn Sales Navigator",
+    "status": "Meeting Scheduled",
+    "tags": ["dutch culture", "data modeling", "management"],
+    "last_contacted": "2026-07-28",
+    "next_follow_up": "2026-08-10",
+    "notes": "Discussed Python automation pipelines and quantitative analysis.",
+    "priority": "High"
+  },
+  {
+    "id": "USR-002",
+    "name": "Elena Rosales",
+    "email": "erosales@impress.example.com",
+    "company": "Impress",
+    "role": "HR Director",
+    "source": "Direct Email",
+    "status": "Follow-up Required",
+    "tags": ["hr", "offboarding", "administrative"],
+    "last_contacted": "2026-07-20",
+    "next_follow_up": "2026-07-24",
+    "notes": "Pending documentation regarding labor status.",
+    "priority": "High"
+  },
+  {
+    "id": "USR-003",
+    "name": "Daniel Ruiz",
+    "email": "druiz@university.example.es",
+    "company": "University of Malaga",
+    "role": "Academic Tutor",
+    "source": "University Network",
+    "status": "Closed",
+    "tags": ["academic", "research", "tfg"],
+    "last_contacted": "2026-07-15",
+    "next_follow_up": "",
+    "notes": "TFG embargo requested and repository protected.",
+    "priority": "Low"
+  },
+  {
+    "id": "USR-004",
+    "name": "Sarah Jenkins",
+    "email": "s.jenkins@techstartup.example.com",
+    "company": "TechFlow Analytics",
+    "role": "Senior Data Scientist",
+    "source": "LinkedIn Sales Navigator",
+    "status": "Initial Outreach",
+    "tags": ["networking", "python", "powerbi"],
+    "last_contacted": "2026-07-29",
+    "next_follow_up": "2026-08-05",
+    "notes": "Sent connection request with personalized note.",
+    "priority": "Medium"
+  }
+]
