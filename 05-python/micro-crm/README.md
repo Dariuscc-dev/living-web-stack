@@ -19,7 +19,7 @@ This project was built to consolidate core Python programming fundamentals and s
 
 1. **Clone the repository:**
    ```bash
-   git clone [[https://github.com/your-username/micro-crm-cli.git](https://github.com/your-username/micro-crm-cli.git)](https://github.com/Dariuscc-dev/living-web-stack/tree/main/05-python/micro-crm) cd micro-crm-cli
+   git clone (https://github.com/Dariuscc-dev/living-web-stack/tree/main/05-python/micro-crm) cd micro-crm-cli
 2. Run the application:
 ```bash
 python main.py
