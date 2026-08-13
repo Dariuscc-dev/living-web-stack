@@ -25,7 +25,7 @@ This project was built to consolidate core Python programming fundamentals and s
 python main.py
 ```
 
-## Why this project matters
+## I think this shows
 
 This is more than a tutorial exercise. It shows that I can:
 
