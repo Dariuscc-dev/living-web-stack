@@ -2,7 +2,7 @@
 
 A comprehensive Python data pipeline that extracts nested JSON contact data, flattens and validates it, loads it into a clean CSV format, and performs automated metric analysis. 
 
-## Overview & Why This Matters
+## Overview
 
 While interactive scripts are useful for manual entry, enterprise environments require automated data processing. This project demonstrates a core **ETL (Extract, Transform, Load)** workflow. 
 
@@ -80,10 +80,3 @@ Incomplete Records:        0
    ```bash
    python main.py --input data/contacts.json --output data/contacts.csv --analysis-output data/analysis.csv --sort-by priority --verbose
    ```
-
-### 4. Why This Project Stands Out in a Portfolio
-
-Unlike a simple calculator or hangman game, this code solves a real-world corporate problem. 
-* **Demonstrates Architectural Thinking:** The logic is strictly divided into Extraction (`json_to_csv.py`), Processing (`csv_processor.py`), Models (`models.py`), and Utilities (`utils.py`). This results in clean and maintainable code.
-* **Integrates `argparse`:** Mastering this shows that you don't just write personal scripts, but rather command-line tools that other engineers or analysts can easily use on their own servers or systems.
-* **Business Vision:** Demonstrates an understanding that data shouldn't just be saved, but structured in a way that Business Intelligence tools can absorb without friction. By flattening the lists (*tags*) and cleaning the dates, the CSV file is left pristine for downstream analysis.
