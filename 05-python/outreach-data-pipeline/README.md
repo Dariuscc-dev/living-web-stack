@@ -66,12 +66,8 @@ Incomplete Records:        0
 ========================================
 ```
 
-## Future Improvements & Version Watch
 
-* **v1.1:** Add a SQLite database integration to replace CSV storage for highly scalable querying.
-* **v1.2:** Implement an automated daily email summary using the `smtplib` module for overdue follow-ups.
-
-### 3. Detailed Setup Instructions
+## Detailed Setup Instructions
 
 1. Create the root directory `outreach-data-pipeline/`.
 2. Inside, create a `data/` subdirectory and save the `contacts.json` file there.
