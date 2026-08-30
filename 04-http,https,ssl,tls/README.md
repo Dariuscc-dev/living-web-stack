@@ -42,3 +42,10 @@ Currently, I consider that I have fulfilled my initial plan: I have a solid unde
 I know this has a real technical impact (for example, implementing HTTPS on limited hardware or IoT projects requires extra memory and processing just to calculate the Handshake), but **I don't see the relevance of digging deeper at the code level or server configuration at this time**.
 
 I leave this milestone documented as an assimilated technical foundation, keeping the door open to dive deeper in the future if scalability or project needs demand it.
+
+
+---
+
+## Contexto
+
+Este proyecto forma parte de una exploración inicial dentro del computer science. Antes de adentrarme más en profundidad en una rama concreta, esta fue una de las ramas que exploré: la living web stack.
