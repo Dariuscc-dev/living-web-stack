@@ -4,6 +4,6 @@
 
 A project that grows layer by layer, trying out the most common technologies found in web development:
 
-HTML → CSS → JS → HTTP/TLS → Python → SQL → REST APIs → Linux → Git → Docker → CI/CD.
+HTML → CSS → JS → HTTP/TLS → Python → SQL → REST APIs → Linux → Git → Docker → CI/CD + EXTRA (VSC).
 
 This isn't a technical or professional project, it's just my way of exploring and understanding, in a simple way, the most common possibilities that exist when building a web application.
