@@ -6,7 +6,7 @@ This repository documents my architectural understanding of how secure web commu
 
 ## HTTP vs. HTTPS (The simple explanation)
 
-To understand the fundamental difference, imagine you want to send an important document to someone by mail:
+To understand the fundamental difference, we have to imagine that we want to send an important document to someone by mail:
 
 *   **HTTP (The Postcard):** This is the base protocol. It works as if you were sending a traditional postcard. The message travels exposed (in "plain text"). The mail carrier, or anyone who intercepts that postcard along the way, can read everything you've written.
 *   **HTTPS (The Safe):** This is the security layer. It works as if you put that same postcard inside a safe. The safe travels through the same postal system in plain sight of everyone, but because it is encrypted, only the final recipient has the key to open it.
