@@ -2,6 +2,6 @@
 
 ---
 
-## Contexto
+## Context
 
-Este proyecto forma parte de una exploración inicial dentro del computer science. Antes de adentrarme más en profundidad en una rama concreta, esta fue una de las ramas que exploré: la living web stack.
+This project is part of an initial exploration into the realm of computer science. Before delving into a specific area, this was one of the fields I explored: the "living web stack."
