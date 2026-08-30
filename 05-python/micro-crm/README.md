@@ -53,3 +53,10 @@ Possible next steps include:
 - The standard library is sufficient for this version of the project.
 - No major framework deprecations affect the current design.
 - Future evolution may include SQLite or a lightweight web interface.
+
+
+---
+
+## Contexto
+
+Este proyecto forma parte de una exploración inicial dentro del computer science. Antes de adentrarme más en profundidad en una rama concreta, esta fue una de las ramas que exploré: la living web stack.
