@@ -24,37 +24,6 @@ This project was built to consolidate core Python programming fundamentals and s
 ```bash
 python main.py
 ```
-
-## I think this shows
-
-This is more than a tutorial exercise. It shows that I can:
-
-- structure a small application properly,
-- separate logic into maintainable modules,
-- persist data safely,
-- and build a tool with a clear real-world use case.
-
-It also connects well with my broader professional profile, since outreach tracking and contact management are directly useful for networking, career development, and future freelance work.
-
-## Future improvements
-
-Possible next steps include:
-
-- search and filtering,
-- export to CSV,
-- SQLite support,
-- reminders and follow-up scheduling,
-- tagging and categorization,
-- a basic GUI or web version later.
-
-## Version & Updates Watch
-
-- Python 3.x remains the current baseline.
-- The standard library is sufficient for this version of the project.
-- No major framework deprecations affect the current design.
-- Future evolution may include SQLite or a lightweight web interface.
-
-
 ---
 
 ## Context
